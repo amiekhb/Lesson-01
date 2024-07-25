@@ -1,7 +1,7 @@
 import { MdOutlineLightMode } from "react-icons/md";
 const Header = () => {
   return (
-    <div className=" mx-20 flex mt-6 justify-between">
+    <div className=" m-20 flex  justify-between ">
       <h1 className="font-black text-3xl">TOM</h1>
       <div className="flex items-center">
         {" "}
