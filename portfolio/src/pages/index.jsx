@@ -1,9 +1,25 @@
 import AboutMe from "@/components/aboutMe/aboutMe";
-import Experience from "@/components/experience/experience";
+import ExperienceCard from "@/components/experience/experience";
 import Content from "@/components/header/content";
 import Header from "@/components/header/header";
 import Skills from "@/components/skills/skills";
-
+const experiences = [
+  {
+    title: "Sr. Frontend Developer",
+    companyLogo: "./zurag/logo.png",
+    jobRoles: ["1", "2", "3"],
+  },
+  {
+    title: "Team Lead",
+    companyLogo: "./zurag/logo.png",
+    jobRoles: ["1", "2", "3"],
+  },
+  {
+    title: "Full Stack Developer",
+    companyLogo: "./zurag/logo.png",
+    jobRoles: ["1", "2", "3"],
+  },
+];
 export default function Home() {
   return (
     <div>
@@ -18,8 +34,15 @@ export default function Home() {
       <section3 className="  bg-white h-96">
         <Skills />
       </section3>
-
-      <Experience title="Sr. Frontend Developer" companyLogo="./logo.png" />
+      <section4 className="bg-gray-50">
+        {experiences.map(({ title, companyLogo, jobRoles }) => (
+          <ExperienceCard
+            title={title}
+            companyLogo={companyLogo}
+            jobRoles={jobRoles}
+          />
+        ))}
+      </section4>
     </div>
   );
 }

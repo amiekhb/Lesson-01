@@ -1,4 +1,4 @@
-import { MdOutlineLightMode } from "react-icons/md";
+import NavButtons from "./nav-buttons";
 const Header = () => {
   return (
     <div className=" m-20 flex  justify-between ">
@@ -13,11 +13,7 @@ const Header = () => {
         </ul>
         <div className="border-l border-gray-600 ">
           <div className=" flex items-center ml-10 gap-5">
-            {" "}
-            <MdOutlineLightMode />
-            <button className="py-[6px] px-4 bg-black text-white rounded-xl">
-              Download CV
-            </button>
+            <NavButtons />
           </div>
         </div>
       </div>
