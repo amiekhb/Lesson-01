@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 const aboutMe = () => {
   return (
-    <div className=" bg-gray-50">
+    <motion.div className=" bg-gray-50">
       <div className="p-20 place-content-center">
         <div className="flex justify-center">
           <p className="text-gray-600 bg-gray-200 rounded-xl text-center h-[28px] w-[105px]">
@@ -61,7 +62,7 @@ const aboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default aboutMe;
