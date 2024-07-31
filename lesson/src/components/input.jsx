@@ -1,19 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Input = () => {
+const Input = ({ handleChange }) => {
   const [searchValue, setSearchValue] = useState("");
-  const handleChange = (e) => {
+
+  const changeValue = (e) => {
     console.log(e.target.value);
-    setSearchValue(e.target.value);
+    handleChange(e.target.value);
   };
   return (
     <div>
       <input
         className="border border-gray-600"
         type="text"
-        onchange={handleChange}
+        onChange={changeValue}
       />
-      <p>Search Value:{searchValue}</p>
     </div>
   );
 };
